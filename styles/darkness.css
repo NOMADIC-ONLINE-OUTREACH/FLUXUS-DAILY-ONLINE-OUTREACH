@@ -7,9 +7,40 @@
 .text-center {
     text-align: center;
 }
+.stars {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+.stars-container {
+    position: relative;
+}
+.stars::after {
+    content: '✨';
+    left: -20px;
+    top: -10px;
+    position: absolute;
+    animation: glitter 3s infinite;
+}
+.stars::before {
+    content: '✨';
+    right: -20px;
+    bottom: -10px;
+    position: absolute;
+    animation: glitter 3s infinite;
+}
+.stars a {
+    color: goldenrod;
+}
+
 h1 {
-    font-size: 30px;
+    font-size: 52px;
     color: tomato;
+}
+
+h4 {
+    color: peachpuff;
+    font-size: 24px;
 }
 
 body {
@@ -28,5 +59,50 @@ body {
     }
     100% {
         background: black;
+    }
+}
+
+@-webkit-keyframes glitter {
+    0% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        -webkit-transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        -webkit-transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+@-moz-keyframes glitter {
+    0% {
+        -moz-transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        -moz-transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        -moz-transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        -moz-transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 1;
     }
 }
