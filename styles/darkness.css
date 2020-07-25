@@ -32,7 +32,23 @@
 .stars a {
     color: goldenrod;
 }
+.icon-moon {
+    width: 150px;
+    margin-left: 10%;
+}
 
+.icon-moon path {
+    fill: transparent;
+    stroke-width: 10;
+    stroke: thistle;
+}
+.icon-moon path {
+    stroke-dasharray: 1560;
+    stroke-dashoffset: 0;
+}
+.icon-moon:hover path {
+    animation: animate-moon 2s linear forwards;
+}
 h1 {
     font-size: 52px;
     color: tomato;
@@ -48,6 +64,8 @@ body {
     background-position: 0, 0;
     min-height: 100vh;
     animation: moving-linear-bg 5s linear infinite;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 @keyframes moving-linear-bg {
@@ -61,7 +79,6 @@ body {
         background: black;
     }
 }
-
 @-webkit-keyframes glitter {
     0% {
         -webkit-transform: scale(1);
@@ -104,5 +121,24 @@ body {
     100% {
         -moz-transform: scale(1);
         opacity: 1;
+    }
+}
+@keyframes animate-moon {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1560;
+    }
+
+    80% {
+        stroke-dashoffset: 3120;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3120;
+        fill: blueviolet;
     }
 }
